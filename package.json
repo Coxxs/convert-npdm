@@ -1,0 +1,34 @@
+{
+  "name": "convert-npdm",
+  "version": "1.0.0",
+  "description": "Convert Nintendo Switch NPDM files to and from JSON",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "convert-npdm": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "THIRD_PARTY_LICENSES.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "typecheck": "tsc --noEmit",
+    "npdm": "node src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
